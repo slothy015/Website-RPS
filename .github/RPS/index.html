@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Rock Paper Scissors Section -->
+  <section class="game-section">
+    <h1>Rock Paper Scissors</h1>
+    <div class="choices">
+      <button class="choice-btn" onclick="playRPS('rock')">🪨 Rock</button>
+      <button class="choice-btn" onclick="playRPS('paper')">📄 Paper</button>
+      <button class="choice-btn" onclick="playRPS('scissors')">✂️ Scissors</button>
+    </div>
+    <div class="result" id="rpsResult">Make a choice to play!</div>
+    <div class="score" id="rpsScore">Wins: 0 | Losses: 0 | Ties: 0</div>
+  </section>
+
+  <!-- Tic Tac Toe Section -->
+  <section class="game-section">
+    <h1>Tic Tac Toe vs Computer</h1>
+    
+    <!-- Difficulty Selector -->
+    <div class="difficulty-selector">
+      <label for="difficulty">Choose Difficulty: </label>
+      <select id="difficulty" onchange="updateDifficulty()">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard" selected>Hard</option>
+      </select>
+    </div>
+    
+    <!-- Tic Tac Toe Game -->
+    <div class="tic-tac-toe" id="ticTacToeBoard"></div>
+    <div class="result" id="tttStatus">Player X's turn</div>
+    <button class="reset-btn" onclick="resetTicTacToe()">🔄 Reset</button>
+  </section>
+
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>

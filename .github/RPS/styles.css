@@ -1,0 +1,201 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e2a47; /* Dark Blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff; /* White text for contrast */
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #add8e6; /* Light Baby Blue */
+    margin-bottom: 30px;
+  }
+  
+  /* Game Section */
+  .game-section {
+    background-color: #282c34; /* Darker Blue for Game Boxes */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 50px;
+  }
+  
+  button {
+    background-color: #4682b4; /* Steel Blue for buttons */
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #5f8fa6; /* Lighter Steel Blue on hover */
+  }
+  
+  button:disabled {
+    background-color: #bbb; /* Greyed out if disabled */
+    cursor: not-allowed;
+  }
+  
+  /* Choice Buttons Styling (Rock Paper Scissors) */
+  .choice-btn {
+    font-size: 20px;
+    padding: 15px 30px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button Grid for RPS */
+  .choices {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .choices .choice-btn {
+    width: 100%;
+  }
+  
+  /* Tic Tac Toe Styles */
+  .tic-tac-toe {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  
+  .tic-tac-toe div {
+    background-color: #40454f; /* Darker Blue for cells */
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+  }
+  
+  .tic-tac-toe div:hover {
+    background-color: #3e4953; /* Slightly lighter blue on hover */
+  }
+  
+  .tic-tac-toe div:active {
+    background-color: #2f3b44; /* Darker blue when clicked */
+  }
+  
+  /* Difficulty Selector */
+  .difficulty-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+  
+  .difficulty-selector label {
+    font-size: 18px;
+    color: #add8e6; /* Light Baby Blue */
+  }
+  
+  .difficulty-selector select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #4682b4; /* Steel Blue Border */
+    background-color: #282c34; /* Dark Blue background */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .difficulty-selector select:hover {
+    background-color: #3e4953; /* Lighter Dark Blue on hover */
+  }
+  
+  .difficulty-selector select:focus {
+    outline: none;
+    border-color: #add8e6; /* Baby Blue border when focused */
+  }
+  
+  .reset-btn {
+    background-color: #ff6347; /* Tomato Red for reset */
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .reset-btn:hover {
+    background-color: #e55347; /* Darker Tomato on hover */
+  }
+  
+  .reset-btn:active {
+    background-color: #d7483b; /* Even darker on active */
+  }
+  
+  /* Status and Result Styling */
+  .result {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    color: #add8e6; /* Light Baby Blue text for result */
+  }
+  
+  .score {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+    color: #bbb; /* Light Grey for the score text */
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .game-section {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .choices {
+      gap: 10px;
+    }
+  
+    .tic-tac-toe div {
+      font-size: 28px;
+      height: 60px;
+    }
+  }
+  
